@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563FB;
+  --color-secondary: #FBBF24;
+}
+
+
+
+*{
+  font-family:Outfit;
+}
+
+.font-playfair{
+  font-family: Playfair !important;
+}
+
+/* Customizing the calendar icon color using your theme variable */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    /* This filter tints the icon towards your primary blue */
+    filter: invert(34%) sepia(98%) saturate(1900%) hue-rotate(210deg) brightness(100%) contrast(105%);
+    transition: all 0.3s ease;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    transform: scale(1.2);
+}
